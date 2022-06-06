@@ -1,5 +1,6 @@
 import 'package:dart_frog/dart_frog.dart';
 
 Response onRequest(RequestContext context) {
-  return Response(body: 'Welcome to Dart Frog!');
+  final welcome = context.read<String>();
+  return Response.json(body: <String, dynamic>{'hello': welcome});
 }
