@@ -4,9 +4,9 @@ import '../../database/student_mock.dart';
 import '../../model/student_model.dart';
 
 Handler middleware(Handler handle) {
-  return handle.use(requestLogger()).use(
-        provider<List<StudentModel>>(
-          (_) => listStudent,
-        ),
-      );
+  return handle.use(
+    provider<List<StudentModel>>(
+      (_) => listStudent,
+    ),
+  );
 }

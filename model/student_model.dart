@@ -1,4 +1,3 @@
-
 class StudentModel {
   StudentModel({
     required this.id,
@@ -25,4 +24,7 @@ class StudentModel {
       'mainTech': mainTech,
     };
   }
+
+  @override
+  String toString() => 'StudentModel(id: $id, name: $name, mainTech: $mainTech)';
 }

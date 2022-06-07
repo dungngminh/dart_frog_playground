@@ -20,6 +20,7 @@ Future<Response> onRequest(RequestContext context) async {
     );
   } catch (e) {
     return Response.json(
+      statusCode: HttpStatus.noContent,
       body: <String, dynamic>{
         'status': HttpStatus.noContent,
         'students': 'not found student',
